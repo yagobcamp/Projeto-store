@@ -1,12 +1,48 @@
 @charset "UTF-8";
 
 * {
-    margin: 0;
+    margin: 10px;
     padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
-    outline: 2px solid black;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: 2px solid white;
 }
 
-main {
-    background-color: aqua;
+body {
+    background-color: rgb(53, 49, 49);
+    color: white;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    width: 90vw;
+    top: 0;
+    padding: 20px 50px;
+    z-index: 3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+    color: aqua;
+    text-shadow: 0 0 10px rgb(76, 194, 105));
+}
+
+header nav ul {
+    display: flex;
+    gap: 48px;
+}
+
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
 }
