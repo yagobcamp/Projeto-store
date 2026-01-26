@@ -7,11 +7,11 @@
     text-decoration: none;
     list-style: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    outline: 1px solid red;
+
 }
 
 body {
-    background-color: rgb(22, 9, 9);
+    background-color: black;
     color: white;
     font-size: 16px;
     overflow: hidden;
@@ -67,6 +67,93 @@ header nav ul li:hover::after {
     position: relative;
     background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a 100%);
     overflow: hidden;
+}
+
+.container::before {
+    content:'';
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(135, 200, 204, 0.2) 0%, rgba(111, 111, 208, 0) 60%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: (-50%, -50%);
+    filter: blur(50px);
+    z-index: 1;
+    animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+.list {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.item {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.active {
+    opacity: 1;
+}
+
+.product-img {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.product-img img {
+    max-width: 80%;
+    max-height: 60%;
+    filter: drop-shadow(0 0 30px rgba(0,247, 255, 0.3));
+    border-radius: 50%;
+}
+
+.content {
+    width: 55%;
+    padding-right: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    flex-direction: column;
+}
+
+.product-tag {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: aqua;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.product-name {
+
 }
 
 
