@@ -1,17 +1,17 @@
 @charset "UTF-8";
 
 * {
-    margin: 10px;
+    margin: 15px;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    outline: 2px solid white;
+    outline: 1px solid red;
 }
 
 body {
-    background-color: rgb(53, 49, 49);
+    background-color: rgb(22, 9, 9);
     color: white;
     font-size: 16px;
     overflow: hidden;
@@ -46,3 +46,27 @@ header nav ul li {
     position: relative;
     padding: 5px 0;
 }
+
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: aqua;
+    transition: 0.3s ease;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a 100%);
+    overflow: hidden;
+}
+
+
